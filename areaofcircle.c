@@ -24,8 +24,8 @@ int main(int argc, char* argv[])
 {
   // the two variables which control the number of times areaOfCircle is called
   // in this case 5.2, 6.2, 7.2
-  float start = 5.2;
-  int reps = 3;
+  float start = 2.5;
+  int reps = 10;
   
   // for testing only - do not change
   getTestInput(argc, argv, &start, &reps);
@@ -34,8 +34,8 @@ int main(int argc, char* argv[])
   
   // add your code below to call areaOfCircle function with values between
   // start and end
-  for (float i = 5.2; i < 7.2; i++){
-    printf("area of circle for %f is %f\n",i,areaOfCircle(i));
+  for (int i = 0; i < reps; i++){
+    printf("area of circle for %f is %f\n",start+i,areaOfCircle(start+i));
   }
 
 
