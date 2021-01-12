@@ -13,9 +13,9 @@ int getTestInput(int argc, char* argv[], int* a, int* b)
 
 // add your arrayAdd function here
 
-void arrayAdd(int arr[],int size,int inc){
+int arrayAdd(int *arr,int size,int inc){
     arr[size] = arr[size] + inc;
-  return arr[a];
+  return arr[size];
 }
 
 int main(int argc, char* argv[]) 
@@ -40,9 +40,10 @@ int main(int argc, char* argv[])
 
   for (int i = 0; i < size; i++){
     arr[i] = i*i;
+    printf("array: %d\n",arrayAdd(&arr[i],i,inc));
   }
-  for (int a = 0; a < size; a++){
-    printf("array: %d\n", arrayAdd(arr[a],size,3));
-  }
+//  for (int a=0;a<size;a++){
+//    printf("array: %d\n",arrayAdd(&arr[a],a,inc));
+ // }
 
 }
