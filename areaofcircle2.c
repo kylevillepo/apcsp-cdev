@@ -24,21 +24,21 @@ float areaOfCircle(float r){
 
 void userInput(){
   char input[256];
-  printf("input lower:\n");
+  printf("\ninput lower: ");
   while (1){
     fgets(input, 256, stdin);
     if ((sscanf(input, "%d", &start) == 1) && (start > 0)) break;
-    printf("not a valid number. Make sure you are using an integer and your number is positive\ninput lower:\n");
+    printf("\nnot a valid number. Make sure you are using an integer and your number is positive\ninput lower: ");
   }
-  printf("input upper:\n");
+  printf("\ninput upper: ");
   while (1){
     fgets(input, 256, stdin);
     if ((sscanf(input, "%d", &reps) == 1) && (reps > start)) break;
-    printf("not a valid number. Make sure you are using an integer and your upper input is greater than your lower input\ninput upper:\n");
+    printf("\nnot a valid number. Make sure you are using an integer and your upper input is greater than your lower input\ninput upper: ");
   }
   reps = reps - start + 1;
   for (int i = 0; i < reps; i++){
-    printf("area of circle for %d is %f\n",start+i,areaOfCircle(start+i));
+    printf("\narea of circle for %d is %f\n",start+i,areaOfCircle(start+i));
   }
 }
 
