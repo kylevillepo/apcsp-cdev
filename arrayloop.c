@@ -8,20 +8,20 @@ int getTestInput(int argc, char* argv[], int* a, int* b)
     sscanf(argv[2], "%d", b);
   }
 }
-
+int i;
 
 
 // add your arrayAdd function here
 
 int arrayAdd(int *arr,int size,int inc){
-    arr[size] = arr[size] + inc;
-  return arr[size];
+    arr[i] = arr[i] + inc;
+  return arr[i];
 }
 
 int main(int argc, char* argv[]) 
 {
   // the variable which controls the size of the array
-  int size = 5;
+  int size = 10;
   
   // the variable which increments the values in the array
   int inc = 3;
@@ -37,13 +37,15 @@ int main(int argc, char* argv[])
   // - pass the array to arrayAdd to add the increment of inc
   // - print out the array
   int arr[size];
-
-  for (int i = 0; i < size; i++){
+  
+  for (i = 0; i < size; i++){
     arr[i] = i*i;
-    printf("array: %d\n",arrayAdd(&arr[i],i,inc));
   }
-//  for (int a=0;a<size;a++){
-//    printf("array: %d\n",arrayAdd(&arr[a],a,inc));
- // }
+  for (i=0;i<size;i++){
+    printf("array: %d\n",arrayAdd(&arr[i],size,inc));
+  }
+
+  for (i = 0; i < size; i++)
+    printf("%d ", arr[i]);
 
 }

@@ -20,6 +20,6 @@ int main()
   double e = 10.9342;
 
   // print value and size of double variable
-  printf("float e value: %d and size: %lu bytes\n", e, sizeof(e));
+  printf("double e value: %g and size: %lu bytes\n", e, sizeof(e));
 }
 
